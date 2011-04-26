@@ -9,6 +9,7 @@ setup(
     install_requires=(
         'django',
         'django-package-installer',
+        'facebook-config',
     ),
     packages=[
         'facebook_javascript_sdk',
