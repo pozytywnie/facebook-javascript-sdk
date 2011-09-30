@@ -8,6 +8,7 @@ class FbInitNode(template.Node):
         super(FbInitNode, self).__init__(*args, **kwargs)
         self.script, self.app_id = script, app_id
     def render(self, context):
+        language_code = context.get('FACEBOOK_LANGUAGE_CODE', 'pl_PL')
         return """
         <div id="fb-root"></div>
         <script type="text/javascript">
@@ -20,11 +21,11 @@ class FbInitNode(template.Node):
           (function() {
             var e = document.createElement('script'); e.async = true;
             e.src = document.location.protocol +
-              '//connect.facebook.net/pl_PL/all.js';
+              '//connect.facebook.net/%(lang)s/all.js';
             document.getElementById('fb-root').appendChild(e);
           }());
         </script>
-        """ % dict(id=self.app_id, script=self.script.render(context))
+        """ % dict(id=self.app_id, script=self.script.render(context), lang=language_code)
 
 @register.tag
 def fb_init_block(parser, token, settings=project_settings):
