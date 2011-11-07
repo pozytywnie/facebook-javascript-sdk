@@ -9,6 +9,7 @@ setup(
     install_requires=(
         'django',
         'django-package-installer',
+        'ludibrio',
         'facebook-config',
     ),
     packages=[
