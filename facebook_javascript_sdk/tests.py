@@ -1,5 +1,6 @@
 from django.test import TestCase
-from ludibrio import Dummy, Stub
+from ludibrio import Dummy
+from ludibrio import Stub
 
 from facebook_javascript_sdk.templatetags.facebook_javascript_sdk import fb_init_block
 

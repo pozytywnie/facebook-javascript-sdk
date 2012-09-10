@@ -1,5 +1,5 @@
-from django import template
 from django.conf import settings as project_settings
+from django import template
 
 register = template.Library()
 
