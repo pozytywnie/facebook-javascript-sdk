@@ -60,5 +60,3 @@ If you want to execute some code after SDK gets loaded you can put the code insi
         }
     });
     {% endblock %}
-
-
