@@ -9,8 +9,10 @@ setup(
     install_requires=(
         'django',
         'django-package-installer',
-        'ludibrio',
         'facebook-config',
+    ),
+    tests_require=(
+        'ludibrio',
     ),
     packages=[
         'facebook_javascript_sdk',
