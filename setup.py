@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='facebook-javascript-sdk',
@@ -8,8 +8,6 @@ setup(
     maintainer_email="tomasz@wysocki.info",
     install_requires=(
         'django',
-        'django-package-installer',
-        'facebook-config',
     ),
     tests_require=(
         'ludibrio',
