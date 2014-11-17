@@ -13,7 +13,7 @@ class FbInitNode(template.Node):
         <div id="fb-root"></div>
         <script type="text/javascript">
           window.fbAsyncInit = function() {
-            FB.init({appId: '%(id)s', status: true, cookie: true, xfbml: true});
+            FB.init({version:'v2.1', appId: '%(id)s', status: true, cookie: true, xfbml: true});
             (function() {
                 %(script)s
             })();
@@ -21,7 +21,7 @@ class FbInitNode(template.Node):
           (function() {
             var e = document.createElement('script'); e.async = true;
             e.src = document.location.protocol +
-              '//connect.facebook.net/%(lang)s/all.js';
+              '//connect.facebook.net/%(lang)s/sdk.js';
             document.getElementById('fb-root').appendChild(e);
           }());
         </script>
